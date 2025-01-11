@@ -1,3 +1,3 @@
 {
-	"conventionalCommits.scopes": ["actions", "astro"]
+	"conventionalCommits.scopes": ["actions", "astro", "index"]
 }
