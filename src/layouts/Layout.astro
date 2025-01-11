@@ -1,0 +1,18 @@
+---
+import Head from "@components/Head.astro";
+import Helix from "@components/Helix.astro";
+import Footer from "@components/Footer.astro";
+---
+
+<html>
+  <head>
+    <Head />
+  </head>
+  <body>
+    <Helix />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

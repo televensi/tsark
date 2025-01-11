@@ -1,25 +1,8 @@
 ---
-import "/src/css/app.css";
+import Layout from "@layouts/Layout.astro";
+import NotFound from "@components/NotFound.astro";
 ---
 
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8" />
-    <title>televensi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="icon" type="image/x-icon" href="/assets/bg.gif" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/bg.gif" />
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/assets/bg.gif" />
-  </head>
-  <body class="relative flex items-center flex-col min-h-screen bg-black overflow-hidden">
-    <video src="/assets/bg.mp4" autoplay loop muted playsinline id="gif" class="motion-gif pb-40 sm:pt-20 absolute h-screen z-10 opacity-0 w-48"></video>
-    <div class="z-20 flex items-center justify-center flex-auto">
-      <p class="motion-heart opacity-0 text-black/80 text-4xl sm:text-5xl font-bold">404</p>
-    </div>
-    <footer class="z-20 motion-footer opacity-0 text-xs sm:text-base text-center my-16 sm:my-4 text-neutral-500">
-      <p>&copy; {new Date().getFullYear()} • <a href="https://z0x.ca" class="hover:text-neutral-400 transition">z0x</a></p>
-      <p>All rights reserved.</p>
-    </footer>
-  </body>
-  <script src="/src/js/index.ts"></script>
-</html>
+<Layout>
+  <NotFound />
+</Layout>
