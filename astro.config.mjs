@@ -1,6 +1,6 @@
-import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import umami from "@yeskunall/astro-umami";
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
 	site: "https://televensi.github.io",
