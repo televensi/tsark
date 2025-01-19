@@ -1,7 +1,7 @@
 import { animate, stagger } from "motion";
 
 const elements = document.querySelectorAll(
-	".motion-link, .motion-gif, .motion-heart, .motion-footer",
+	".motion-links, .motion-gif, .motion-heart, .motion-footer",
 );
 
 animate(
