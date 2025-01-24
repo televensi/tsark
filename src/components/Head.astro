@@ -1,18 +1,11 @@
 ---
-import "/src/css/app.css";
-import "@fontsource-variable/quicksand";
+import "@/styles/globals.css";
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="icon" type="image/x-icon" href="/assets/helix.webp" />
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/helix.webp" />
-<link
-  rel="apple-touch-icon"
-  type="image/png"
-  sizes="180x180"
-  href="/assets/helix.webp"
-/>
+<link rel="icon" type="image/x-icon" href="/assets/favicon.svg" />
+
 <link rel="canonical" href="https://televensi.github.io" />
 
 <title>televensi</title>
@@ -30,4 +23,26 @@ import "@fontsource-variable/quicksand";
 
 <meta name="darkreader-lock" />
 
-<script src="/src/js/index.ts"></script>
+<script is:inline>
+  const getThemePreference = () => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  };
+  const isDark = getThemePreference() === "dark";
+  document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+  if (typeof localStorage !== "undefined") {
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+</script>
