@@ -1,5 +1,7 @@
 ---
 import Head from "@components/Head.astro";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <html lang="en">
@@ -10,5 +12,7 @@ import Head from "@components/Head.astro";
 		<main>
 			<slot />
 		</main>
+		<SpeedInsights />
+		<Analytics />
 	</body>
 </html>
