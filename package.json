@@ -41,6 +41,7 @@
     "@radix-ui/react-tooltip": "^1.1.7",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "@yeskunall/astro-umami": "^0.0.3",
     "astro": "^5.1.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
