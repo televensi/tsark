@@ -78,8 +78,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-cover bg-center bg-[url('/assets/bg_light.png')] dark:bg-[url('/assets/bg_dark.png')] text-foreground;
-    @apply min-h-screen font-sans antialiased overflow-hidden;
+    @apply bg-cover bg-center bg-background;
+    @apply min-h-screen font-sans text-foreground antialiased overflow-hidden;
   }
 
 }

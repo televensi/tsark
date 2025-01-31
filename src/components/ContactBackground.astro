@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+import bg_light from "../assets/bg_light.png";
+import bg_dark from "../assets/contact-bg_dark.png";
+---
+
+<div class="dark:hidden fixed inset-0 z-0">
+  <Image
+    src={bg_light}
+    alt="light contact background"
+    class="w-full h-full object-cover"
+  />
+</div>
+<div class="dark:block hidden fixed inset-0 z-0">
+  <Image
+    src={bg_dark}
+    alt="dark contact background"
+    class="w-full h-full object-cover"
+  />
+</div>
