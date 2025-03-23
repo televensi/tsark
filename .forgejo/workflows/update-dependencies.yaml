@@ -6,7 +6,7 @@ on:
 
 jobs:
   update-deps:
-    runs-on: ubuntu-latest
+    runs-on: docker
 
     steps:
       - name: Checkout code
@@ -24,8 +24,8 @@ jobs:
 
       - name: Commit updates
         run: |
-          git config user.name "gitea-actions[bot]"
-          git config user.email "gitea-actions[bot]@git.z0x.ca"
+          git config user.name "actions[bot]"
+          git config user.email "actions[bot]@git.z0x.ca"
           git add .
           if git diff --staged --quiet; then
             echo "No updates avalable"
